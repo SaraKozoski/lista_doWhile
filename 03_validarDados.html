@@ -11,11 +11,42 @@
     */
 
     //Entrada
-
+    let nome = "";
+    let idade = "";
+    let salario = "";
+    let sexo = "";
+    let estadoCivil = "";
 
     //Processamento
+    nome = prompt(`Insira um nome:`);
+    while (nome.lenght <= 3) {
+        alert(`O nome precisa ter mais de 3 caracteres`)
+        nome = prompt(`Insira um nome:`)
 
-
+    }
+    idade = Number(prompt(`Insira  a sua idade `));
+    while (idade < 0 || idade > 150) {
+        alert(`A idade tem que estar entre 0 e 150 anos`);
+        idade = Number(prompt(`Insira  a sua idade `));
+    }
+    salario = Number(prompt(`Insira o seu salario:`));
+    while (salario <= 0) {
+        alert(`O salario tem que ser maior que 0`);
+        salario = Number(prompt(`Insira o seu salario:`));
+    }
+    sexo = prompt(`Insira o seu sexo Feminino = f | Masculino = m`).toLowerCase();
+    while (sexo != "f"  ) {
+        while (sexo!= "m") {
+        alert(`O sexo é invalido`);
+        sexo = prompt(`Insira o seu sexo Feminino = F | Masculino = M`);
+    }
+    }
+   
+    estadoCivil = prompt(`Insira o seu estado civil: S = solteiro | C = casado | D = divorciado | V = viuvo`);
+    while (estadoCivil == "s" || estadoCivil == "c" || estadoCivil == "d" || estadoCivil == "v") {
+        alert(`estado civil invalido`)
+        estadoCivil = prompt(`Insira o seu estado civil: S = solteiro | C = casado | D = divorciado | V = viuvo`);
+    }
     //Saída
 
 </script>
